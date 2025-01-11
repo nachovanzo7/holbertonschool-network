@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Deja en claro que se debe ejecutar en bash
 
 #ip -> gestionar interfaces de red
 #-4 -> muestra solo las IPv4

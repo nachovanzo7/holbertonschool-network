@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Deja en claro que se debe ejecutar en bash
 
 sed -i '/127.0.0.2 localhost/d' /etc/hosts
 sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
