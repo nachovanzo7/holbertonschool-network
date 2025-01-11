@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
-#Ejecutar con bash
 
-# Bloqueo para evitar modificaciones concurrentes
-exec 200>/etc/hosts.lock
-flock -n 200 || exit 1
+# Esperar 1 segundo antes de intentar modificar el archivo (ajustar según sea necesario)
+sleep 1
 
-# Eliminando las líneas si existen
+# Eliminar las líneas si existen
 sed -i '/127.0.0.2 localhost/d' /etc/hosts
 sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
 
-# Agregando las nuevas entradas
+# Agregar las nuevas entradas
 echo "127.0.0.2 localhost" >> /etc/hosts
 echo "8.8.8.8 facebook.com" >> /etc/hosts
