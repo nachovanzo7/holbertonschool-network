@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Ejecutar con bash
 
 # Bloqueo para evitar modificaciones concurrentes
 exec 200>/etc/hosts.lock
