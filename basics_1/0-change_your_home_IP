@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Se debe ejecutar con bash
 
 # Esperar 1 segundo antes de intentar modificar el archivo (ajustar según sea necesario)
 sleep 1
