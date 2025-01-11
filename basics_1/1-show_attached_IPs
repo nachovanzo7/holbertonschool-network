@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#ip -> gestionar interfaces de red
+#-4 -> muestra solo las IPv4
+#addr show -> ips asignadas a interfaces
+
+ip -4 -o addr show | awk '{print $4}' | cut -d/ -f1
+

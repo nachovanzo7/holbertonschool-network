@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Usar Netcat para escuchar en el puerto 98 en localhost
+nc -l -p 98

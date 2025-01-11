@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sed -i '/127.0.0.2 localhost/d' /etc/hosts
+sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
+
+#Agregar nuevas ips
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
