@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Verifica los puertos en escucha (LISTEN) y muestra el PID/Programa asociado
-sudo netstat -tunlp | grep LISTEN
+sudo netstat -tunlp
