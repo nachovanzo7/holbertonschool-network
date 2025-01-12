@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Ejecutar en bash
 
 cp /etc/hosts /etc/hosts.bak
 
