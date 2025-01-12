@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #Ejecutar en bash
 
-# Verifica los puertos en escucha (LISTEN) y muestra el PID/Programa asociado
-sudo netstat -tunlp
+netstat -tulnp
