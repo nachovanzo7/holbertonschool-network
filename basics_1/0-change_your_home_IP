@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-#Se debe ejecutar con bash
-
-# Esperar 1 segundo antes de intentar modificar el archivo (ajustar según sea necesario)
-sleep 1
+# Se debe ejecutar con bash
 
 # Crear un archivo de bloqueo para evitar concurrencia
 exec 200>/etc/hosts.lock
 flock -n 200 || { echo "Otro proceso está usando /etc/hosts"; exit 1; }
+
+# Esperar 1 segundo antes de intentar modificar el archivo
+sleep 1
 
 # Eliminar las líneas si existen
 sudo sed -i '/127.0.0.2 localhost/d' /etc/hosts
 sudo sed -i '/8.8.8.8 facebook.com/d' /etc/hosts
 
 # Agregar las nuevas entradas
-echo "127.0.0.2 localhost" >> /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+echo "127.0.0.2 localhost" | sudo tee -a /etc/hosts
+echo "8.8.8.8 facebook.com" | sudo tee -a /etc/hosts
